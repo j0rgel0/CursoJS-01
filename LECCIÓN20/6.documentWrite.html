@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con Javascript</title>
+</head>
+
+<body>
+    <h1>Manejo DOM con Javascript</h1>
+    <button onclick='mostrar()'>Mostrar</button>
+    <br/>
+
+    <div id='valores'></div>
+    <script>
+        document.write('Saludos desde Javascript');
+        function mostrar(){
+            //Tener cuidado que no sobreescriba todo el contenido.
+            document.write('Adios');
+        }
+    </script>
+</body>
+
+</html>

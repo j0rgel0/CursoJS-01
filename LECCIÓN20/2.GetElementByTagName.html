@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con Javascript</title>
+</head>
+<body>
+    <h1>Ejemplo DOM con Javascript</h1>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p> 
+     <!-- No necesita identificador para localizarlos con getElementsByTagName -->
+    <script>
+        // Para acceder al valor del DOM se utiliza innerHTML
+        let parrafos = document.getElementsByTagName('p');
+        console.log('Número de párrafos: '+parrafos.length);
+        console.log(`Número de párrafos: ${parrafos.length}`);
+        for(let i=0; i<parrafos.length;i++){
+            console.log(`${i} - ${parrafos[i].innerHTML}`);
+        }
+    </script>
+</body>
+</html>

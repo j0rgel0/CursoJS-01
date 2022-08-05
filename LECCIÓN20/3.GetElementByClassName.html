@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con Javascript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul">Ejemplo DOM con Javascript</h1>
+    <p class="azul">Párrafo 1</p>
+    <p class="azul">Párrafo 2</p>
+    <script>
+        // Para acceder al valor del DOM se utiliza innerHTML
+        let elementos = document.getElementsByClassName('azul');
+        console.log('Elementos que tiene aplicada la clase: '+elementos.length);
+        console.log(`Elementos que tiene aplicada la clase: ${elementos.length}`);
+        console.log(` `);
+        console.log(`Realizado con for`);
+        for(let i=0; i<elementos.length;i++){
+            console.log(`i:${i} - ${elementos[i].innerHTML}`);
+        }
+        // elemento es lo que se va iterar en cada elemento del arreglo
+        // elementos es el array.
+        console.log(` `);
+        console.log(`Realizado con For of`);
+        for(let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        }
+    </script>
+</body>
+</html>

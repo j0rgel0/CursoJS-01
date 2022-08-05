@@ -5,11 +5,12 @@
 </head>
 <body>
     <h1 id="cabecero">Ejemplo DOM con Javascript</h1>
-    <p id="parrafo">Saludos!</p>
+    <p id="parrafo1">Párrafo 1</p>
+    <p id="parrafo2">Párrafo 2</p>
     <script>
         // Para acceder al valor del DOM se utiliza innerHTML
         let cabecero = document.getElementById('cabecero').innerHTML;
-        let parrafo = document.getElementById('parrafo').innerHTML;
+        let parrafo = document.getElementById('parrafo1').innerHTML;
         console.log('Valor cabecero: '+ cabecero);
         console.log('Valor párrafo: '+ parrafo);
 
@@ -17,6 +18,12 @@
 
         console.log(`Valor cabecero: ${cabecero}`);
         console.log(`Valor párrafo: '${parrafo}`);
+
+        console.log('------');
+
+        let parrafos = document.getElementsByTagName('p');
+        console.log('Número de párrafos: '+parrafos.length);
+        console.log(`Número de párrafos: ${parrafos.length}`);
     </script>
 </body>
 </html>
