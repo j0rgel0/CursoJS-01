@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con Javascript</title>
+</head>
+
+<body onload="entrar()">
+
+    <h1 id="titulo">Manejo DOM con Javascript</h1>
+    <br/>
+    <form id='formulario'>
+        Nombre: <input type='text' name='nombre'  onchange="convertir(this)" /> <br />
+    </form>
+
+    <script>
+        function convertir(str){
+            str.value = str.value.toUpperCase();
+            document.getElementById('mostrar').innerHTML = texto;
+        }
+    </script>
+</body>
+
+</html>

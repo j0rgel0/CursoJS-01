@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con Javascript</title>
+</head>
+
+<body>
+    <!-- <h1 onclick="this.innerHTML='Nuevo Título'">Manejo DOM con Javascript</h1> -->
+
+    <h1 onclick="cambiarTexto(this)">Manejo DOM con Javascript</h1>
+    <!-- <button onclick="mostrar()">Mostrar</button> -->
+    <br />
+    <script>
+        function cambiarTexto(titulo) {
+            titulo.innerHTML = 'Cambiamos el título';
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+        }
+    </script>
+</body>
+
+</html>
