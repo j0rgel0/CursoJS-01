@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con Javascript</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Manejo DOM con Javascript</h1>
+    <br/>
+    <form id='formulario'>
+        Nombre: <input type='text' id='nombre'/> <br />
+        Apellido: <input type='text' id='apellido'/>
+    </form>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('focus', (evento)=>{
+            evento.target.style.background = 'pink';
+        }, true); //True para que se aplique en los elementos de tipo input
+
+        formulario.addEventListener('blur', (evento)=>{
+            evento.target.style.background = '';
+        }, true);
+
+    </script>
+</body>
+
+</html>

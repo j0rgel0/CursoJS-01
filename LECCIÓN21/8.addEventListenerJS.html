@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con Javascript</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Manejo DOM con Javascript</h1>
+    <br/>
+    <form id='formulario'>
+        Nombre: <input type='text' id='nombre'/> 
+        <br><br>Apellido: <input type='text' id='apellido'/>
+    </form>
+
+    <script>
+        document.getElementById('nombre').addEventListener('focus',cambiar); //no se pone onfocus solo focus, se quita el on
+        document.getElementById('nombre').addEventListener('blur',regresar); //no se pone onfocus solo focus, se quita el on
+        document.getElementById('apellido').addEventListener('focus',cambiar); //no se pone onfocus solo focus, se quita el on
+        document.getElementById('apellido').addEventListener('blur',regresar); //no se pone onfocus solo focus, se quita el on
+        function cambiar(evento){
+            let componente = evento.target; //Sería como el this
+            componente.style.background = 'yellow';
+        }
+        function regresar(evento){
+            let componente = evento.target; //Sería como el this
+            componente.style.background = 'white';
+        }
+    </script>
+</body>
+
+</html>
